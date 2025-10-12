@@ -36,10 +36,11 @@ pipeline {
         stage ('Push Image') {
             steps {
                 sh '''
-                docker build -t vialif37/simple-apps-pipeline-apps
+                docker build -t vialif37/simple-apps-pipeline-apps .
                 docker push viailf37/simple-apps-pipelines-apps
                 docker images prune -a -f
                 '''
+            }
         }
     }
 }
