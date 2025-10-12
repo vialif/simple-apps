@@ -38,7 +38,7 @@ pipeline {
                 sh '''
                 docker build -t vialif37/simple-apps-pipeline-apps .
                 docker push viailf37/simple-apps-pipelines-apps
-                docker images prune -a -f
+                docker image prune -a -f
                 '''
             }
         }
