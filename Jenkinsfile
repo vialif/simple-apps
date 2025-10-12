@@ -24,7 +24,15 @@ pipeline {
                 -Dsonar.host.url=http://172.23.7.21:9000 \
                 -Dsonar.login=sqp_ce3c0e802a25bdf6d824d822259d7050c0b3c84d'''
             }
-         }    
+         }
+         stage('Deploy compose') {
+            steps {
+                sh '''
+                docker compose build
+                docker compose up -d
+                '''
+            }
+        }    
 
     }
 }
