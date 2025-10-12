@@ -8,6 +8,14 @@ pipeline {
                 git branch: 'main', url: 'https://github.com/vialif/simple-apps.git'
             }
         }
+        stage ('Unit Testing') {
+            steps {
+                sh ''''
+                npm install
+                npm test
+                npm test:coverage'''
+            }
+        }
 
     }
 }
