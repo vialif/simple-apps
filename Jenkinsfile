@@ -10,7 +10,7 @@ pipeline {
         }
         stage ('Unit Testing') {
             steps {
-                sh ''''
+                sh '''
                 npm install
                 npm test
                 npm test:coverage'''
