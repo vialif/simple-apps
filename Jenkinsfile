@@ -1,5 +1,5 @@
 pipeline {
-    agent { label 'devops1-viailf'}
+    agent { label 'devops1-vialif'}
     tools {nodejs "NodeJS 18.16.0"}
     
     stages {
